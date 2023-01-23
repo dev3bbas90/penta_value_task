@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Mongo\TwitterController;
+use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/getCategoryWithAllChildsTree', function () {
+    return Category::whereNull('parent_id')->with('childs')->get();
+});
 
 Route::get('/', function () {
     return view('welcome');
