@@ -73,24 +73,21 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="{{ asset('js/intlTelInput.js') }}"></script>
 <script src="{{ asset('js/phone.js') }}"></script>
-{{-- <script src="{{ asset('js/intlTelInput-jquery.js') }}"></script> --}}
-
 
 <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
 
 
-
-
 <script type="text/javascript">
     const firebaseConfig = {
-        apiKey: "AIzaSyBjAEzt9YtQzdVEf_vuTNvDglynnlonDoo",
-        authDomain: "giftologer-project.firebaseapp.com",
-        projectId: "giftologer-project",
-        storageBucket: "giftologer-project.appspot.com",
-        messagingSenderId: "66589931958",
-        appId: "1:66589931958:web:e4201122ae91da0d0fa917",
-        measurementId: "G-9XFVMH4WN6"
+        apiKey: "AIzaSyDbJDNytEsv8ykHcOv0aIHRDGp62SaJdlk",
+        authDomain: "penta-42155.firebaseapp.com",
+        projectId: "penta-42155",
+        storageBucket: "penta-42155.appspot.com",
+        messagingSenderId: "876613102098",
+        appId: "1:876613102098:web:e1de64a1cd6d07ec0a46cb",
+        measurementId: "G-7GTTGKTLCQ"
     };
+
 
     firebase.initializeApp(firebaseConfig);
     window.onload = function() {

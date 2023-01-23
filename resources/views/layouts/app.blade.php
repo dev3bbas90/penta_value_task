@@ -44,6 +44,10 @@
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Mobile login form') }}</a>
                         </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('eloquent.index') }}">{{ __('eloquent Task') }}</a>
+                        </li>
+
                     </ul>
                 </div>
             </div>

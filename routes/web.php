@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\Mongo\TwitterController;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
@@ -29,6 +30,14 @@ Route::group(['prefix'          => 'twitter' , 'as' => 'twitter.'  ], function (
     Route::get('data'           ,   [TwitterController::class , 'data'])    ->name('data') ;
     Route::post('pullData'      ,   [TwitterController::class , 'pullData'])->name('fetch');
 });
+
+Route::group(['prefix'          => 'upload_task' , 'as' => 'upload_task.'  ], function () {
+    Route::get('/'              ,   [UploadsController::class , 'index'])   ->name('index');
+});
+
+Route::get('/eloquent'              ,   [AccountController::class , 'index'])   ->name('eloquent.index');
+
+
 
 Auth::routes();
 
