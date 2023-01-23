@@ -17,7 +17,7 @@ class CreateTweetsTable extends Migration
             $table->id();
             $table->text('id')->nullable();
             $table->text('text')->nullable();
-            $table->foreignId('user_id')->on('users')->nullable();
+            $table->foreignId('user_id')->nullable()->on('users');
             $table->string('created_at')->nullable();
 
         });
