@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\Mongo\TwitterController;
+use App\Http\Controllers\UploadsController;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -37,6 +38,11 @@ Route::group(['prefix'          => 'upload_task' , 'as' => 'upload_task.'  ], fu
 
 Route::get('/eloquent'              ,   [AccountController::class , 'index'])   ->name('eloquent.index');
 
+Route::post('/uploadFiles'              ,   [UploadsController::class , 'drop'])->name('uploadFiles.drop');
+Route::post('/uploadFiles/drop'              ,   [UploadsController::class , 'upload'])->name('uploadFiles.store');
+Route::get('/uploadFiles', function () {
+    return view('uploadFiles');
+})->name('uploadFiles');
 
 
 Auth::routes();

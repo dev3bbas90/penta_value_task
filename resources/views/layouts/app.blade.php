@@ -48,6 +48,10 @@
                             <a class="nav-link" href="{{ route('eloquent.index') }}">{{ __('eloquent Task') }}</a>
                         </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('uploadFiles') }}">{{ __('Upload Files') }}</a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
